@@ -60,7 +60,7 @@
                                             <li><a class="menu-item" href="#section-projects">Projects</a>
                                             </li>
                                             <li><a class="menu-item" href="#section-contact">Contact</a></li>
-                                              <li><a class="menu-item" href="#faq">Faq</a></li>
+                                            <li><a class="menu-item" href="#faq">Faq</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                 Dubai South provides modern amenities, green spaces, and recreational facilities to
                                 support a vibrant lifestyle.</p>
                             <p class="wow fadeInUp" data-wow-delay=".6s">With dedicated business districts and advanced
-                                infrastructure, it drives Dubai’s economic vision and attracts investors, businesses,
+                                infrastructure, it drives Dubai's economic vision and attracts investors, businesses,
                                 and residents seeking long-term growth.</p>
                         </div>
                     </div>
@@ -208,7 +208,59 @@
                     </div>
                 </div>
 
-                <div class="row g-4">
+                <!-- Search and Filter Bar -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap gap-2 justify-content-center align-items-center">
+                            <!-- <input type="text" id="propertySearch" class="form-control w-auto" placeholder="Search properties..." style="min-width:200px;"> -->
+                            <select id="propertyNameFilter" class="form-control w-auto">
+                                <option value="">All Properties</option>
+                                <option value="Monaco Mansions">Monaco Mansions</option>
+                                <option value="Beachfront Gates Phase 2">Beachfront Gates Phase 2</option>
+                                <option value="South Living">South Living</option>
+                                <option value="South Bay (Phase 6)">South Bay (Phase 6)</option>
+                                <option value="Hayat Residences">Hayat Residences</option>
+                                <option value="Samana Hills">Samana Hills</option>
+                                <option value="Azizi Venice 10">Azizi Venice 10</option>
+                                <option value="The Eighty Three">The Eighty Three</option>
+                                <option value="South Square">South Square</option>
+                            </select>
+                            <select id="propertyTypeFilter" class="form-control w-auto">
+                                <option value="">All Types</option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Townhouse">Townhouse</option>
+                                <option value="Mansion Villa">Mansion Villa</option>
+                                <option value="Penthouse">Penthouse</option>
+                            </select>
+                            <select id="bedroomFilter" class="form-control w-auto">
+                                <option value="">All Bedrooms</option>
+                                <option value="Studio">Studio</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4+ Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                                <option value="6">6+ Bedrooms</option>
+                                <option value="7">7+ Bedrooms</option>
+                                <option value="8">8+ Bedrooms</option>
+                            </select>
+                            <select id="priceFilter" class="form-control w-auto">
+                                <option value="">All Prices</option>
+                                <option value="500000">Below 500,000 AED</option>
+                                <option value="1000000">Below 1,000,000 AED</option>
+                                <option value="2000000">Below 2,000,000 AED</option>
+                                <option value="3000000">Below 3,000,000 AED</option>
+                                <option value="5000000">Below 5,000,000 AED</option>
+                                <option value="10000000">Below 10,000,000 AED</option>
+                                <option value="10000001">10,000,000+ AED</option>
+                            </select>
+                            <button id="resetFilters" class="btn1 btn-secondary btn-outline-light">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="propertiesGrid">
                     <div class="col-md-6">
                         <div class="hover overflow-hidden relative text-light text-center wow zoomIn"
                             data-wow-delay=".0s">
@@ -409,7 +461,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span>Dubai South (Dubai World Central), Dubai</span>
-                                    <span class="badge bg-dark"> <i class="fa-solid fa-bed me-1"></i>Studios, 1, 2 &
+                                    <span class="badge bg-dark"> <i class="fa-solid fa-bed me-1"></i>Studio, 1, 2 &
                                         3-Bedroom</span>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center mt-2">
@@ -475,6 +527,11 @@
                             </div>
                             <div class="gradient-edge-bottom abs w-100 h-40 bottom-0"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <button id="showMoreBtn" class="btn2 btn-outline-light">Show More</button>
                     </div>
                 </div>
             </div>
@@ -551,12 +608,12 @@
 
 
 
-        <section id="contact" class="relative">
+        <section id="section-agents" class="relative">
 
             <div class="container relative z-2">
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-12 text-center">
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Meet Our Special Agents</h2>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Meet Our Special Agent</h2>
                     </div>
                 </div>
 
@@ -635,55 +692,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="agentss/nardos.png" class="w-40 circle" alt="Nardos Gidey">
-                            <div class="mt-3">
-                                <h4 class="mb-0">Nardos Gidey</h4>
-                                <div class="fw-500 id-color">Client Manager</div>
-                                <div class="fw-500 id-color">Amharic & English</div>
-                                <div class="mt-2">
-                                    <a href="mailto:nardos.gidey@indusre.ae" title="Email" class="me-3">
-                                        <i class="fa-solid fa-envelope fa-lg"></i>
-                                    </a>
-                                    <a title="Call" id="callbtn1" class="me-3 callBtn" data-agent="Nardos"
-                                        data-phone="+971551462613" data-agent-inc="665ac7d98846f">
-                                        <i class="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <a id="whatsappBtn1" title="WhatsApp" class="whatsappBtn" data-agent="Nardos"
-                                        data-phone="+971551462613" data-agent-inc="665ac7d98846f">
-                                        <i class="fa-brands fa-whatsapp fa-lg"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Agent 2 -->
-                    <!-- <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="agentss/Navid.png" class="w-40  circle" alt="Navid Rostamnamadi">
-                            <div class="mt-3">
-                                <h4 class="mb-0">Navid Rostamnamadi</h4>
-                                <div class="fw-500 id-color">Client Manager</div>
-                                <div class="fw-500 id-color">Farsi & English</div>
-                                <div class="mt-2">
-                                    <a href="mailto:navid.rostamnamadi@indusre.ae" title="Email" class="me-3">
-                                        <i class="fa-solid fa-envelope fa-lg"></i>
-                                    </a>
-                                    <a title="Call" id="callbtn1" class="me-3 callBtn" data-agent="Navid"
-                                        data-phone="+971523776924" data-agent-inc="678754ac00f4e">
-                                        <i class="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <a id="whatsappBtn1" title="WhatsApp" class="whatsappBtn" data-agent="Navid"
-                                        data-phone="+971523776924" data-agent-inc="678754ac00f4e">
-                                        <i class="fa-brands fa-whatsapp fa-lg"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="col-md-4">
                         <div class="text-center">
@@ -844,7 +852,7 @@
 
                     <div class="col-md-12 text-center">
                         <form name="" method="post" action="https://www.indus-inhouse.com/lead-api-v2">
-                      <input value="67ac489d54ce8" name="campaign" type="hidden">
+                            <input value="67ac489d54ce8" name="campaign" type="hidden">
                             <input value="lp" name="source" type="hidden">
                             <input value="https://jvcindubai.com/thank-you.html" name="return_url" type="hidden">
                             <div class="row g-4">
@@ -975,10 +983,10 @@
                     <div class="col-lg-6 relative z-3">
                         <div class="ps-lg-4 py-5 my-5">
 
-                             <div class="mt-4 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="mt-4 wow fadeInUp" data-wow-delay=".7s">
                                 <h5>What makes Dubai South unique?</h5>
                                 <p>
-                                    Home to Expo City and the world’s largest airport. Green, sustainable design with
+                                    Home to Expo City and the world's largest airport. Green, sustainable design with
                                     integrated infrastructure.
                                 </p>
                             </div>
@@ -1020,79 +1028,68 @@
     </section>
 
     <!-- footer begin -->
-    <footer class="section-dark">
-        <!-- <div class="container">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <img src="indus.png" class="w-200px" alt="">
-                        <div class="spacer-single"></div>
-                        <div class="fs-16">
-                            Almas Tower , Jumeirah Lake Towers<br>
-                            Dubai , UAE
-                        </div>
-                    </div>
+    <footer class="text-light bg-dark pt-5">
+        <div class="container">
+            <div class="row gy-4 ">
+
+                <!-- Company Overview -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="indus.png" class="mb-3" alt="Indus Logo" style="max-width: 180px;">
+                    <p class="small">
+                        Established in 2004, Indus Real Estate LLC is a distinguished Real Estate Regulatory Agency
+                        (RERA) registered company, celebrating 20 years of unparalleled success in Dubai's dynamic real
+                        estate landscape.
+                    </p>
+                    <p class="small">
+                        With a solid foundation built on integrity, transparency, and excellence, we have garnered a
+                        reputable position as a premier real estate agency in the UAE and beyond.
+                    </p>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold">Get In Touch</h5>
+                    <p><strong>Head Office:</strong><br> Office 203, Al Sharafi Building, Bur Dubai, 118163, Dubai, UAE
+                    </p>
+                    <p><strong>DMCC Branch:</strong><br> 4H Almas Tower, Jumeirah Lake Towers (Cluster G), Dubai, UAE
+                    </p>
+                    <p><strong>Customer Care:</strong><br> 800 INDUS (46387)</p>
+                    <p><strong>Need Live Support:</strong><br> <a href="mailto:info@indusre.ae"
+                            class="text-light">info@indusre.ae</a></p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold">Useful Link</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">About us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Featured Properties</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Our Best Services</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Request Visit</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Explore -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold">Explore</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">All Properties</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Our Agents</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">All Projects</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="spacer-double"></div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 mb-sm-30">
-                    <div class="d-flex justify-content-center">
-                        <i class="fs-60 id-color icon_phone"></i>
-                        <div class="ms-3">
-                            <h4 class="mb-0">Call Us</h4>
-                            <p>Call: +971 56 139 6917</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-sm-30">
-                    <div class="d-flex justify-content-center">
-                        <i class="fs-60 id-color icon_clock"></i>
-                        <div class="ms-3">
-                            <h4 class="mb-0">Opening Hours</h4>
-                            <p>Mon to Sat 08:00 - 20:00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-sm-30">
-                    <div class="d-flex justify-content-center">
-                        <i class="fs-60 id-color icon_mail"></i>
-                        <div class="ms-3">
-                            <h4 class="mb-0">Email Us</h4>
-                            <p>contact@residem.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mt-2">
-                        Copyright 2025 - Indus Real Estate
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="social-icons mb-sm-30 text-center">
-                            <a href="https://www.facebook.com/profile.php?id=100083310042155"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/company/indusrealestate"><i
-                                    class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/indusREdubai/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@IndusRealEstateLLC"><i
-                                    class="fa-brands fa-youtube"></i></a>
-                            <a
-                                href="https://api.whatsapp.com/send?phone=97180046387&text=Hi%2C%20I%20came%20across%20your%20website%20(dubai-south-lp)%20and%20I%27m%20interested%20in%20learning%20more%20about%20your%20property%20listings%20and%20available%20options.%20Kindly%20connect%20me%20with%20one%20of%20your%20property%20specialists.%20Thank%20you!"><i
-                                    class="fa-brands fa-whatsapp"></i></a>
-                        </div>
-                    </div>
+            <!-- Bottom Footer -->
+            <div class="row mt-4 pt-3 border-top border-secondary">
+                <div class="col-md-12 text-center small mb-3">
+                    Copyright 2025 - Indus Real Estate LLC
                 </div>
             </div>
         </div>
     </footer>
+
     <div id="whatsappModal" class="modal5">
         <div class="modal5-content">
             <span class="close" id="whatsappClose">&times;</span>
@@ -1102,7 +1099,7 @@
             </div>
             <div class="whatsapp-header">Get a Faster Response</div>
             <form id="whatsappForm" method="post" action="https://www.indus-inhouse.com/lead-api-v3">
-          <input value="67ac489d54ce8" name="campaign" type="hidden">
+                <input value="67ac489d54ce8" name="campaign" type="hidden">
                 <input value="lp" name="source" type="hidden">
                 <input value="https://dxbmaritimecity.com/thank-you.html" name="return_url" type="hidden">
                 <input type="hidden" name="agent" id="whatsappAgentName">
@@ -1327,6 +1324,25 @@
         .callBtn {
             cursor: pointer;
         }
+
+        .btn1 {
+            padding: 3px 25px 3px 25px;
+            color: #ffffff;
+            background-color: #0a0c0d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            float: right;
+        }
+
+        .btn2 {
+            padding: 3px 25px 3px 25px;
+            color: #ffffff;
+            background-color: #0a0c0d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+        }
     </style>
 
     <script>
@@ -1438,6 +1454,148 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var agentSwiper = new Swiper('.agent-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 }
+            }
+        });
+    </script>
+
+    <script>
+        // --- Improved Property Filtering, Show More, and Reset Logic ---
+        (function () {
+            // Collect all property cards
+            const propertyCards = Array.from(document.querySelectorAll('#propertiesGrid > .col-md-6'));
+            // Store property data for filtering
+            const propertyData = propertyCards.map(card => {
+                const name = card.querySelector('h3')?.textContent.trim() || '';
+                const location = card.querySelector('span')?.textContent.trim() || '';
+                const type = Array.from(card.querySelectorAll('.badge.bg-dark')).map(b => b.textContent.trim()).join(' ');
+                // --- Bedroom Parsing ---
+                let bedroomsArr = [];
+                // Extract all 'Studio' (case-insensitive) and all numbers from the card HTML
+                const studioMatches = card.innerHTML.match(/studio/gi);
+                if (studioMatches) {
+                    bedroomsArr.push('Studio');
+                }
+                // Extract all numbers that are likely bedrooms (not prices)
+                // Look for patterns like '1, 2 & 3-Bedroom', '1 Bedroom', etc.
+                let numberMatches = card.innerHTML.match(/(\d+)(?=\s*[-, &and]*\s*(Bed(room)?|,|&|and|<|$))/gi);
+                if (numberMatches) {
+                    numberMatches.forEach(n => bedroomsArr.push(Number(n)));
+                }
+                // Remove duplicates
+                bedroomsArr = [...new Set(bedroomsArr)];
+                // --- End Bedroom Parsing ---
+                const priceText = card.innerHTML.match(/\d{1,3}(,\d{3})*(\+)?\s*AED/gi)?.[0] || '';
+                let price = 0;
+                if (priceText) {
+                    price = parseInt(priceText.replace(/[^\d]/g, ''));
+                }
+                return { card, name, location, type, bedroomsArr, price };
+            });
+
+            let filteredList = propertyData.slice();
+            let showingAll = false;
+
+            function applyFilters() {
+                const nameFilter = document.getElementById('propertyNameFilter').value;
+                const type = document.getElementById('propertyTypeFilter').value;
+                const bedroom = document.getElementById('bedroomFilter').value;
+                const price = document.getElementById('priceFilter').value;
+                filteredList = propertyData.filter(p => {
+                    let match = true;
+                    if (nameFilter && p.name !== nameFilter) match = false;
+                    if (type && !p.type.toLowerCase().includes(type.toLowerCase())) match = false;
+                    // --- Bedroom filter logic ---
+                    if (bedroom) {
+                        if (bedroom === 'Studio') {
+                            if (!p.bedroomsArr.includes('Studio')) match = false;
+                        } else if (bedroom.endsWith('+ Bedrooms')) {
+                            const min = parseInt(bedroom);
+                            if (!p.bedroomsArr.some(b => typeof b === 'number' && b >= min)) match = false;
+                        } else {
+                            const n = parseInt(bedroom);
+                            if (!p.bedroomsArr.includes(n)) match = false;
+                        }
+                    }
+                    // --- End Bedroom filter logic ---
+                    if (price) {
+                        if (price === '10000001') { if (p.price < 10000000) match = false; }
+                        else if (p.price > 0 && p.price >= parseInt(price)) match = false;
+                    }
+                    return match;
+                });
+                showingAll = false;
+                renderProperties();
+            }
+
+            function anyFilterActive() {
+                return (
+                    document.getElementById('propertyNameFilter').value ||
+                    document.getElementById('propertyTypeFilter').value ||
+                    document.getElementById('bedroomFilter').value ||
+                    document.getElementById('priceFilter').value
+                );
+            }
+
+            function renderProperties() {
+                // Hide all first
+                propertyData.forEach(p => p.card.style.display = 'none');
+                // If any filter is active, show all filtered and hide Show More
+                if (anyFilterActive()) {
+                    filteredList.forEach(p => p.card.style.display = '');
+                    document.getElementById('showMoreBtn').style.display = 'none';
+                } else if (!showingAll) {
+                    filteredList.slice(0, 4).forEach(p => p.card.style.display = '');
+                    document.getElementById('showMoreBtn').style.display = filteredList.length > 4 ? '' : 'none';
+                } else {
+                    filteredList.forEach(p => p.card.style.display = '');
+                    document.getElementById('showMoreBtn').style.display = 'none';
+                }
+            }
+
+            function showAllFiltered() {
+                showingAll = true;
+                renderProperties();
+            }
+
+            function resetFilters() {
+                document.getElementById('propertyNameFilter').value = '';
+                document.getElementById('propertyTypeFilter').value = '';
+                document.getElementById('bedroomFilter').value = '';
+                document.getElementById('priceFilter').value = '';
+                filteredList = propertyData.slice();
+                showingAll = false;
+                renderProperties();
+            }
+
+            // Event listeners
+            document.getElementById('propertyNameFilter').addEventListener('change', applyFilters);
+            document.getElementById('propertyTypeFilter').addEventListener('change', applyFilters);
+            document.getElementById('bedroomFilter').addEventListener('change', applyFilters);
+            document.getElementById('priceFilter').addEventListener('change', applyFilters);
+            document.getElementById('showMoreBtn').addEventListener('click', showAllFiltered);
+            document.getElementById('resetFilters').addEventListener('click', resetFilters);
+
+            // On load
+            resetFilters();
+        })();
+    </script>
 
 </body>
 
